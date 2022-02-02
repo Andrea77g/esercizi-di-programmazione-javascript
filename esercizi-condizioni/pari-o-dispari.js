@@ -15,3 +15,14 @@
 
   http://www.imparareaprogrammare.it
 */
+
+let number = parseInt(prompt('INSERISCI UN NUMERO'));
+
+function evnOrOdd(number){
+    let result;
+    if (number%2 === 0){result=0; console.log('Output: ' + result + ' IL NUMERO E\' PARI')}
+    else {result=1; console.log('Output: ' + result + ' IL NUMERO E\' DISPARI')}
+    return result;
+};
+
+evnOrOdd(number);
