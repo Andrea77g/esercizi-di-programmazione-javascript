@@ -11,3 +11,15 @@
 
   http://www.imparareaprogrammare.it
 */
+let birthYear = parseInt(prompt('INSERIRE L\'ANNO DI NASCITA'));
+let currentDate = new Date;2022
+currentDate = currentDate.getFullYear();
+
+function age(birthYear,currentDate) {
+    let result;
+    if (birthYear > currentDate) {result = 'HAI INSERITO UNA DATA NON VALIDA';}
+    else {result='L\'eta è: ' + (currentDate-birthYear) + ' anni\nAnni mancanti per raggiungere 100 anni: ' + (100-(currentDate-birthYear));}
+    return result;
+};
+
+console.log(age(birthYear,currentDate));
