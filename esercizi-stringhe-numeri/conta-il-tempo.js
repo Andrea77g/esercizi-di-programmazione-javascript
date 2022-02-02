@@ -12,3 +12,12 @@
 
   http://www.imparareaprogrammare.it
 */
+
+let inputSecondi = prompt('Inserisci il numero di secondi da convertire');
+
+let ore = Math.floor(inputSecondi/3600);
+let minuti = Math.floor(inputSecondi%3600/60);
+let secondi = inputSecondi - (ore*3600) - (minuti *60);
+
+console.log(`${inputSecondi} secondi corrispondono a ${ore} ore, ${minuti} minuti e ${secondi} secondi.`) ;
+
