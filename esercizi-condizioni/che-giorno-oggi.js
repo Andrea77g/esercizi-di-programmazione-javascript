@@ -22,3 +22,23 @@
 
   http://www.imparareaprogrammare.it
 */
+
+let day = parseInt(prompt('INSERISCI UN NUMERO TRA 1 E 7 PER VISUALIZZARE IL RELATIVO GIORNO DELLA SETTIMANA'));
+
+switch (day) {
+    case (1) : console.log(day + ' = LUNEDI\'');
+    break;
+    case (2) : console.log(day + ' = MARTEDI\'');
+    break;
+    case (3) : console.log(day + ' = MERCOLEDI\'');
+    break;
+    case (4) : console.log(day + ' = GIOVEDI\'');
+    break;
+    case (5) : console.log(day + ' = VENERDI\'');
+    break;
+    case (6) : console.log(day + ' = SABATO\'');
+    break;
+    case (7) : console.log(day + ' = DOMENICA\'');
+    break;
+    default : console.log('HAI INSERITO UN NUMERO NON VALIDO');
+};
