@@ -19,3 +19,32 @@
 
   http://www.imparareaprogrammare.it
 */
+
+
+let num1 = parseInt(prompt('GIOCATORE 1, SCEGLI UN NUMERO DA 1 A 100'));
+let num2 = parseInt(prompt('GIOCATORE 2, SCEGLI UN NUMERO DA 1 A 100'));
+
+if (num1<1 || num1>100 || num2<1 || num2>100) {console.log('HAI INSERITO UN NUMERO NON VALIDO');}
+else {game(num1,num2)}
+
+function game(num1,num2){
+
+let randomNum = Math.random() * (100-1) + 1;
+randomNum = Math.floor(randomNum);
+
+console.log('IL NUMERO CASUALE E\' :' + randomNum); 
+console.log('IL GIOCATORE 1 HA SCELTO IL NUMERO:' + num1); 
+console.log('IL GIOCATORE 2 HA SCELTO IL NUMERO:' + num2); 
+
+let delta1 = num1 - randomNum;
+let delta2 = num2 - randomNum;
+
+delta1 = (delta1<0) ? (delta1*-1) : (delta1);
+delta2 = (delta2<0) ? (delta2*-1) : (delta2);
+
+if (num1 === randomNum) {console.log('IL GIOCATORE 1 HA INDOVINATO');}
+else if (num2 === randomNum) {console.log('IL GIOCATORE 2 HA INDOVINATO');}
+else if (delta1<delta2) {console.log('NESSUNO DEI DUE GIOCATORI HA INDOVINATO, MA IL GIOCATORE 1 SI E\' AVVICINATO DI PIU\'');}
+else if (delta1>delta2) {console.log('NESSUNO DEI DUE GIOCATORI HA INDOVINATO, MA IL GIOCATORE 2 SI E\' AVVICINATO DI PIU\'');}
+else {console.log('PERFETTA PARITA\'');}
+};
